@@ -1,0 +1,33 @@
+/*this is css comment*/
+body {
+    background-color: forestgreen;
+    color: antiquewhite;
+}
+
+nav {
+    height: 600px;
+    width: 200px;
+    float: left;
+    padding: 5px;
+    line-height: 30px;
+}
+
+footer {
+    text-align: center;
+    margin-right: 200px;
+}
+
+img {
+    margin-right: 200px;
+}
+
+header {
+    text-align: center;
+}
+a{
+    color: antiquewhite;
+}
+h2{
+    text-align: center;
+    margin-right: 200px;
+}
