@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <!--Vincent Notrangelo was here-->
+
+<head>
+    <title>Vault Tec Registration</title>
+</head>
+
+<body>
+    <header>
+        <h1> *** Vault Tec Registration ***</h1>
+        <p>Welcome to one of the Pipboys provided by Vault Tec
+            You will use this Pipboy to register what vault you belong to.
+        </p>
+        <img src="vault boy.jpg">
+    </header>
+    <main>
+        <h2>Registration Form</h2>
+        <!-- Create a label and input box for the First name -->
+        <label>First Name :</label><br />
+        <input type="text" id="firstName"><br />
+        <!-- Create a label and input box for the Last name -->
+        <label>Last Name:</label><br />
+        <input type="text" id="LastName"><br />
+        <!--Vault Number-->
+        <label>Vault ID:</label><br />
+        <input type="text" id="VaultNumber"><br />
+        <hr />
+        <!-- Create a button for users to submit -->
+        <button onclick="checkForm()">Submit Form</button>
+        <!--Notice we are leaving HTML and going into Javascript -->
+        <script>
+            // Now we are in Javascript
+            // Create a function to check the Deathstar Registration Form
+            // Check if the variable has more than > 20 characters and give a
+            // warning - do not continue the program if invalid.
+            function checkForm() {
+                // get the first name from the form
+                var firstName = document.getElementById("firstName").value;
+                // get the Last name frow the form
+                var LastName = document.getElementById("LastName").value;
+                // check the vault number from the form
+                var VaultNumber = document.getElementById("VaultNumber").value;
+                if (firstName.length > 20) {
+                    alert("First Name is To long for a American patriot. Please enter a name of 20 characters or less.");
+                    return;
+                }
+                if (LastName.length > 20) {
+                    alert("Last Name is To long for a American patriot. Please enter a name of 20 characters or less.");
+                    return;
+                }
+                if (VaultNumber.length > 20) {
+                    alert("There aren't that many vaults doofus.");
+                    return;
+                }
+                // combine first and last name and display it
+                var fullName = firstName + " " + LastName;
+                alert("Welcome to Vault Tec" + " " + fullName + " " + "You have been assigned to vault" + " " + VaultNumber + " Have a Vaultastic Day!!")
+            }
+
+        </script>
+        <!-- Now we are back in HTML only -->
+
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
