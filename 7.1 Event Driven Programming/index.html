@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Vincent Notrangelo was here-->
+
+<head>
+    <title>Funny Cat</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            margin: 0;
+            padding: 1;
+            background-color: green;
+        }
+
+        #Kitty {
+            position: absolute;
+            top: 500px;
+            left: 500px;
+            width: 1000px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Quantum Cat Discombobulator </br> <img src="clock thing.jpg" </br></h1>
+    <button id="startButton">Start</button>
+    <button id="stopButton">Stop</button>
+    <img id="Kitty" src="funny cat.jpg">
+
+    <script>
+        let meme = document.getElementById('Kitty');
+        let intervalId;
+
+        // Function to start moving the Cat
+        function startMoving() {
+            if (intervalId) return; // Prevent multiple intervals
+
+            intervalId = setInterval(() => {
+                const maxWidth = window.innerWidth - meme.offsetWidth;
+                const maxHeight = window.innerHeight - meme.offsetHeight;
+
+                const randomX = Math.random() * maxWidth;
+                const randomY = Math.random() * maxHeight;
+
+                meme.style.left = randomX + 'px';
+                meme.style.top = randomY + 'px';
+            }, 500); // Move every 500ms
+        }
+
+        // Function to stop moving the image
+        function stopMoving() {
+            clearInterval(intervalId);
+            intervalId = null;
+        }
+
+        // Attach event listeners to buttons
+        document.getElementById('startButton').addEventListener('click', startMoving);
+        document.getElementById('stopButton').addEventListener('click', stopMoving);
+    </script>
+</body>
+
+</html>
